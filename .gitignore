@@ -1,0 +1,14 @@
+# Node
+node_modules/
+build/
+.env
+
+# Python/Java
+__pycache__/
+*.class
+*.log
+*.jar
+
+# OS junk
+.DS_Store
+Thumbs.db
