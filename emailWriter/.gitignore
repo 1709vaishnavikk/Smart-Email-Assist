@@ -1,33 +1,30 @@
-HELP.md
-target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# Ignore Maven target folder
+/target/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# Ignore compiled classes
+*.class
 
-### IntelliJ IDEA ###
-.idea
-*.iws
+# Ignore logs
+*.log
+
+# Ignore IntelliJ files
+.idea/
 *.iml
-*.ipr
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+# Ignore Eclipse files
+*.classpath
+*.project
+*.settings/
 
-### VS Code ###
-.vscode/
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore application properties containing secrets
+src/main/resources/application.properties
+src/main/resources/application.yml
+src/main/resources/application-secrets.properties
+
+# Ignore test-specific config if exists
+src/test/resources/application.properties
+src/test/resources/application.yml
