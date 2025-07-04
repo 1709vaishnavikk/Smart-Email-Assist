@@ -25,34 +25,59 @@ public class EmailGeneratorService {
         this.webClient = webClientBuilder.build();
     }
 
-    public String generateEmailReply(EmailRequest emailRequest){
-        //1)Build a prompt
-        String prompt=buildPrompt(emailRequest);
+    // public String generateEmailReply(EmailRequest emailRequest){
+    //     //1)Build a prompt
+    //     String prompt=buildPrompt(emailRequest);
 
-        //2)Crafting a request
-        Map<String, Object> requestBody=Map.of(
-              "contents",new Object[]{
-                  Map.of("parts",new Object[]{
-                          Map.of("text",prompt)
-                  })
-                }
-        );
+    //     //2)Crafting a request
+    //     Map<String, Object> requestBody=Map.of(
+    //           "contents",new Object[]{
+    //               Map.of("parts",new Object[]{
+    //                       Map.of("text",prompt)
+    //               })
+    //             }
+    //     );
 
-        //3)Do request and get response
-        String response=webClient.post()
-                .uri(geminiApiUrl+geminiApiKey)
-                .header("Content-Type","application/json")
-                .bodyValue(requestBody)
-                .retrieve()
+    //     //3)Do request and get response
+    //     String response=webClient.post()
+    //             .uri(geminiApiUrl+geminiApiKey)
+    //             .header("Content-Type","application/json")
+    //             .bodyValue(requestBody)
+    //             .retrieve()
 
-                .bodyToMono(String.class)
-                .block();
+    //             .bodyToMono(String.class)
+    //             .block();
 
 
-        //Extract the reply and return it
+    //     //Extract the reply and return it
 
-        return extractResponseContent(response) ;
-    }
+    //     return extractResponseContent(response) ;
+    // }
+   public String generateEmailReply(EmailRequest emailRequest){
+    String prompt = buildPrompt(emailRequest);
+
+    Map<String, Object> requestBody = Map.of(
+            "contents", new Object[]{
+                    Map.of("parts", new Object[]{
+                            Map.of("text", prompt)
+                    })
+            }
+    );
+
+    String response = webClient.post()
+            .uri(uriBuilder -> uriBuilder
+                    .path(geminiApiUrl)
+                    .queryParam("key", geminiApiKey)
+                    .build())
+            .header("Content-Type", "application/json")
+            .bodyValue(requestBody)
+            .retrieve()
+            .bodyToMono(String.class)
+            .block();
+
+    return extractResponseContent(response);
+}
+
 
     private String extractResponseContent(String response) {
         try{
