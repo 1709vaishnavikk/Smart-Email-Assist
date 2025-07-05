@@ -56,6 +56,8 @@ public class EmailGeneratorService {
    public String generateEmailReply(EmailRequest emailRequest){
     String prompt = buildPrompt(emailRequest);
 
+    System.out.println("Calling: https://generativelanguage.googleapis.com" + geminiApiUrl);   
+
     Map<String, Object> requestBody = Map.of(
             "contents", new Object[]{
                     Map.of("parts", new Object[]{
