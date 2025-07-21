@@ -1,48 +1,47 @@
 # 📬 Smart Email Assist – AI-Powered Gmail Reply Assistant
 
-**Smart Email Assist** is a powerful Chrome extension that enhances your Gmail experience by generating intelligent email replies in your preferred tone — **Professional, Friendly, Casual, Assertive**, or **Empathetic**.
+**Smart Email Assist** is a powerful Chrome extension that enhances your Gmail experience by generating intelligent, context-aware email replies in your preferred tone — **Professional, Friendly, Casual, Assertive**, or **Empathetic**.
 
-> 🔐 Privacy-first and productivity-focused — backed by a Spring Boot REST API deployed on [Render](https://smart-email-assist.onrender.com).
+> 🔐 Built with a **privacy-first** approach and focused on productivity — powered by a Spring Boot REST API, containerized with Docker, and deployed on [Render](https://smart-email-assist.onrender.com).
 
 ---
 
 ## 🚀 Features
 
-- Tone-based reply generation: Choose from multiple tones like professional, friendly, casual, etc.
-- AI-powered backend for intelligent, human-like responses
-- Seamless Gmail integration — looks and feels like a native feature
-- No user data stored — all requests are processed in real time
-- Backend built with Spring Boot, containerized with Docker, and deployed on Render
+- 🎯 **Tone-Based Reply Generation**: Choose from multiple tones to match the email context.
+- 🤖 **AI-Powered Backend**: Generates natural, human-like responses using intelligent logic.
+- 💌 **Seamless Gmail Integration**: Embedded directly into your Gmail interface for a native feel.
+- 🔒 **Zero Data Storage**: All requests are processed in real time — nothing is stored.
+- 🛠️ **Tech Stack**: Spring Boot, Docker, and hosted on Render for reliable performance.
 
 ---
 
 ## 🌐 Live Backend API
 
-> 🟢 Hosted on Render:  
-**https://smart-email-assist.onrender.com**
+> 🟢 Hosted on Render  
+**🔗 https://smart-email-assist.onrender.com**
 
-The backend is live and ready to accept requests from the Chrome extension.
+The backend is live and ready to handle requests from the Chrome extension.
 
 ---
 
 ## 🧩 Chrome Extension Status
 
-🚀 **Smart Email Assist** has been **published** and is currently **under review** by the **Chrome Web Store** team.
+✅ **Smart Email Assist** is now live on the **Chrome Web Store**!
 
-⏳ **Estimated Review Time**: 5–7 business days  
-📌 The Chrome Store installation link will be added here once the review is complete.
+📦 **Install it here**:  
+🔗 [Smart Email Assist – Chrome Extension](https://chromewebstore.google.com/detail/smart-email-assist/agkmdgnaabacmabhmbppnijngdefonop)
 
-> ✅ The extension fully complies with Chrome Web Store policies, including **zero data collection** and a **clean Gmail-native UI** experience.
+> ✅ Fully compliant with Chrome Web Store policies — including **zero data collection**, and a **clean, Gmail-native UI** experience.
 
 ---
 
 ## 📷 UI Preview
 
-> <img width="1918" height="966" alt="image" src="https://github.com/user-attachments/assets/a4b962d1-bcec-41cc-a4e7-834af27e513c" />
-
+<img width="1918" height="966" alt="Smart Email Assist UI" src="https://github.com/user-attachments/assets/a4b962d1-bcec-41cc-a4e7-834af27e513c" />
 
 ---
 
 ## 📄 License
 
-All rights reserved. Unauthorized copying, modification, or redistribution is prohibited.
+All rights reserved. Unauthorized copying, modification, or redistribution is strictly prohibited.
